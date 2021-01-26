@@ -89,7 +89,37 @@ else {
 
 // Task 7
 
-let now = new Date() - (1 Ja);
-let seconds = 
+// Task 7a
 
+let now = Math.floor((new Date()/1000/60/60)%24) + 2;
+
+if (now >= 23 || now <= 5) {
+	console.log("Доброї ночі");
+} else if (now > 5 && now < 11) {
+	console.log("Доброго ранку");
+} else if (now >= 11 && now < 17) {
+	console.log("Доброго дня");
+} else {
+	console.log("Доброго вечора");
+}
+
+// Task 7b
+let now = Math.floor((new Date()/1000/60/60)%24) + 2;
+
+switch (true) {
+	case (now >= 23 || now <= 5):
+		console.log("Доброї ночі");
+		break;
+	case (now > 5 && now < 11):
+		console.log("Доброї ночі");
+		break;
+	case (now >= 11 && now < 17):
+		console.log("Доброго дня");
+		break;
+	case (now >= 17 && now < 23):
+		console.log("Доброго вечора");
+		break;
+	default:
+		console.log("ERROR 001: Something went wrong");
+}
 
