@@ -94,6 +94,7 @@ console.log(lastElem([3, 4, 10, -5],2));
 console.log(lastElem([3, 4, 10, -5],8));
 
 // Task 8 
+
 const string = prompt("Enter a sentance please", "you should have entered a sentanse");
 console.log(string[0].toUpperCase() + string.slice(1));
 
