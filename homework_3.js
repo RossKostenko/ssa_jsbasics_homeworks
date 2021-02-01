@@ -39,7 +39,7 @@ if (Number.isInteger(a) && Number.isInteger(b)) {
 	console.log("Sorry, you have entered not an Integer");
 }
 
-//Task 5a
+//Task 5
 
 function findMin() {
 	let minimum = arguments[0]; 
