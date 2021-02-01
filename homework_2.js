@@ -1,6 +1,6 @@
 // task 2a
 let b = prompt("Please enter a number", false);
-console.log(b > 0 && (b%2) == 0);
+console.log(b > 0 && b % 2 == 0);
 
 // task 2b
 let b = prompt("Please enter a number", false);
@@ -11,19 +11,11 @@ console.log(b%7 == 0);
 
 //task 3
 let newArray = [];
-newArray.push("Nikki")
-newArray.push(70);
-newArray.push(true);
-newArray.push(null);
-
+newArray.push("Nikki", 70, true, null)
 console.log(newArray);
-
 newArray.push(prompt("Gimme a number", 0));
-
 console.log(newArray[4]);
-
 newArray.shift();
-
 console.log(newArray);
 
 //task 4
@@ -55,7 +47,7 @@ switch (true) {
 		console.log("Sorry, you are too young");
 		break;
 	case isAdult > 34: 
-		console,log("I would ask you to think about the cildren if you have none");
+		console,log("I would ask you to think about the children if you have none");
 		break;
 	case isAdult >= 65:
 		console.log("Man, i would think twice before jumping with parachoute");
@@ -82,7 +74,7 @@ if (incorrectData === true) {
 }
 else {
 	const area = Math.sqrt(halfPerimetr * (halfPerimetr - sideA) * (halfPerimetr - sideB) * (halfPerimetr - sideC));
-	console.log(Math.round(area*1000)/1000);
+	console.log(Math.round(area*1000)/1000); // area.toFixed(3);
 	const isNinety = (sideA ** 2 == sideB ** 2 + sideC ** 2) || (sideB ** 2 == sideA ** 2 + sideC ** 2) || (sideC ** 2 == sideA ** 2 + sideB ** 2);
 	console.log (isNinety);
 }
@@ -92,7 +84,7 @@ else {
 // Task 7a
 
 let now = Math.floor((new Date()/1000/60/60)%24) + 2;
-
+// let currnetHour = date.getHours():
 if (now >= 23 || now <= 5) {
 	console.log("Доброї ночі");
 } else if (now > 5 && now < 11) {
