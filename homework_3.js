@@ -57,7 +57,7 @@ findMin(12, 14, 4, -4, 0.2);
 // Task 6 - не працює
 
 function findUnique(arr) {
-	for (count = 0; count < arr.length - 1 ; count++) {
+	for (let count = 0; count < arr.length - 1 ; count++) {
 		let argument = arr[count];
 		for (let i = 1; i < arr.length;  i++) {
 			if (argument === arr[i]) {
