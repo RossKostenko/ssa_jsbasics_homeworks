@@ -134,3 +134,28 @@ try {
   console.log(exception.name);
   console.log(exception.message);
 }
+
+// with showUser function
+function showUserId(id) {
+	if ( id >= 0 ) {
+		return id;
+	} else {
+	throw new Error("Sorry, you have entered negative number " + id);
+}
+}
+function showUsers(ids) {
+	let wrightIds =[];
+	let id;
+	var err;
+	for (let i = 0; i < ids.length; i++) {
+		id = ids[i];
+		showUserId(id);
+		wrightIds.push(id);
+	} return wrightIds;
+}
+try {
+	showUsers([7, -12, 44, 22]);
+} catch (exception) {
+	console.log(exception.name);
+	console.log(exception.message);
+}
