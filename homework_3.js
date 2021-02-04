@@ -54,24 +54,24 @@ function findMin() {
 
 findMin(12, 14, 4, -4, 0.2);
 
-// Task 6 - не працює
+// Task 6
 
 function findUnique(arr) {
-	for (let count = 0; count < arr.length - 1 ; count++) {
-		let argument = arr[count];
-		for (let i = 1; i < arr.length;  i++) {
-			if (argument === arr[i]) {
-				console.log(false);
-				break;
-			} else {
-				console.log(true);
-			}
-		}
-	}
+    for (count = 0; count < arr.length - 2 ; count++) {
+        let argument = arr[count];
+        let result;
+        for (let i = count + 1; i < arr.length;  i++) {
+            if (argument === arr[i]) {
+                result = false;
+                return result;
+            } else {
+                result = true; 
+            }
+        } 
+    } return result;
 }
-
 findUnique([1, 2, 3, 5, 3]);  
-findUnique([1 2, 3, 5, 11]);
+findUnique([1, 2, 3, 5, 11]);
 
 // Task 7 
 
