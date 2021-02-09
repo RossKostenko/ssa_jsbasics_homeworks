@@ -83,16 +83,25 @@ class Worker {
 	}
 }
 
-// case 1
+
+// Stage 1
 let worker1 = new Worker("John Johnson", 20, 23); 
 console.log(worker1.fullName); // John Johnson                 
 worker1.showSalary(); // John Johnson salary: 460
+// Stage 2
 worker1.setExp = 1.2; 
 console.log("New experience: " + worker1.showExp); // New experience: 1.2
 worker1.showSalaryWithExperience(); // John Johnson salary: 552
+// Stage 3
 worker1.setExp = 1.5; 
 console.log("New experience: " + worker1.showExp); // New experience: 1.5
 worker1.showSalaryWithExperience(); // John Johnson salary: 690
+// Stage 4
+let worker2 = new Worker("Tom Tomson", 48, 22);
+worker2.setExp = 1.5;
+let worker3 = new Worker("Andy Ander", 29, 23);
+worker1.setExp = 1.5;
+sortSalary();
 
 // Task 5 - works
 
