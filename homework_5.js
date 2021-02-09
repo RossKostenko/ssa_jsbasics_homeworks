@@ -61,30 +61,36 @@ console.log("Current course: " + stud1.showCourse()); //Current course: 6
 
 // Task 4 - need to work with
 
+// !!!!!!!!!   Attention Dont start all tasks together
 class Worker {
-  _experience = 1.2;
-  constructor(fullName, dayRate, workingDays) {
-    this.fullName = fullName;
-    this.dayRate = dayRate;
-    this.workingDays = workingDays;
-  }
-  showSalary() {
-    return this.fullName + ": " + this.dayRate * this.workingDays;
-  }
-  showSalaryWithExperience() {
-    return this.dayRate * this.workingDays * _experience;
-  }
-  get name() {
-    return this._name;
-  }
-  set name(Exp) {}
+	constructor (fullName, dayRate, workingDays) {
+		this.fullName = fullName;
+		this.dayRate = dayRate;
+		this.workingDays = workingDays;
+		this._setExp = 1;
+	}
+	showSalary() {
+		return this.fullName + ': ' + this.dayRate * this.workingDays;
+	}
+	showSalaryWithExperience() {
+		return this.dayRate * this.workingDays * this._setExp;
+	}
+	set setExp(setExp){
+		this._setExp = setExp;
+	}
+	get showExp() {
+		return this.setExp;
+	}
 }
-let worker1 = new Worker("John Johnson", 20, 23);
-console.log(worker1.fullName); // John Johnson
+
+// case 1
+let worker1 = new Worker("John Johnson", 20, 23); 
+console.log(worker1.fullName); // John Johnson                 
 worker1.showSalary(); // John Johnson salary: 460
+worker1.setExp = 1.2; 
 console.log("New experience: " + worker1.showExp); // New experience: 1.2
 worker1.showSalaryWithExperience(); // John Johnson salary: 552
-worker1.setExp = 1.5;
+worker1.setExp = 1.5; 
 console.log("New experience: " + worker1.showExp); // New experience: 1.5
 worker1.showSalaryWithExperience(); // John Johnson salary: 690
 
