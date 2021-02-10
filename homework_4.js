@@ -111,51 +111,24 @@ try {
   console.log(MonthException.message);
 }
 
-// Task 4 without showUser function
-
-function showUsers(ids) {
-  var err;
-  let wrightIds = [];
-  for (let i = 0; i < ids.length; i++) {
-    if (ids[i] > 0) {
-      wrightIds.push(ids[i]);
-    } else {
-      err = 1;
-    }
-  }
-  console.log(wrightIds);
-  if (err === 1) {
-    throw new Error("Sorry, you have entered invalid number");
-  }
-}
-try {
-  showUsers([7, -12, 44, 22]);
-} catch (exception) {
-  console.log(exception.name);
-  console.log(exception.message);
-}
-
-// with showUser function
-function showUserId(id) {
-	if ( id >= 0 ) {
-		return id;
-	} else {
-	throw new Error("Sorry, you have entered negative number " + id);
-}
+// Task 4
+function showUser(id) {
+	if ( id < 0) {
+		throw new Error('ID myst be not negative: ' + id);
+	}
+return { id: id };
 }
 function showUsers(ids) {
-	let wrightIds =[];
-	let id;
-	var err;
-	for (let i = 0; i < ids.length; i++) {
-		id = ids[i];
-		showUserId(id);
-		wrightIds.push(id);
-	} return wrightIds;
+	let result = [];
+	ids.forEach(function (id) {
+		try {
+			let person = showUser(id);
+			result.push(person);
+		} catch (exception) {
+			console.log(exception.message);
+		}
+	});
+	return result;
 }
-try {
-	showUsers([7, -12, 44, 22]);
-} catch (exception) {
-	console.log(exception.name);
-	console.log(exception.message);
-}
+showUsers([7, -12, 44, 22]);
+
