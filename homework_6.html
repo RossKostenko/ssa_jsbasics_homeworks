@@ -1,0 +1,173 @@
+<!--  Task 1 1st method works --> 
+<html>
+<body>	
+	<div id="test">First</div>
+  </body>
+  <script type="text/javascript">
+  	document.querySelector("div.test") = Last;
+  </script>
+</html>
+
+<!--  Task 1 2nd method works --> 
+<html>
+<body>	
+	<div id="test">First</div>
+  </body>
+  <script type="text/javascript">
+  	document.getElementById("test") = Last;
+  </script>
+</html>
+
+<!--  Task 2 works --> 
+
+<html>
+	<body>	
+		 <img class="image" src="dog.jpg">
+	</body>
+  	<script type="text/javascript">
+  		let imageToChange = document.querySelector(".image");
+  		imageToChange.src = "cat.jpg";
+  		alert()
+  	</script>
+</html>
+
+<!--  Task 3 works --> 
+
+<html>
+	<body>
+		<h2>Article header</h2>      
+	      	<div id="text">
+	        	<p>First paragraph</p>
+	        	<p>Second paragraph</p>
+	        	<p>Third paragraph</p>
+	      	</div>
+		<p>Another text</p>
+	</body>
+	<script type="text/javascript">
+        let paragraphsArray = document.querySelectorAll("#text p");
+        let result = '';
+        for ( let i = 0; i < paragraphsArray.length; i++) {
+            result += 'Selector text ' + i + ': ' + paragraphsArray[i].innerHTML + '\n';
+        }
+        alert(result);
+	</script>
+</html>
+
+<!-- Task 4 1st method works -->
+
+<html>
+	<body>
+		<ol class = "test_ol">
+            <il id = "test_il_one">1</il>
+            <il id = "test_il_two">2</il>
+            <il id = "test_il_three">3</il>
+            <il id = "test_il_four">4</il>
+            <il id = "test_il_five">5</il>
+        </ol> 
+	</body>
+	<script type="text/javascript">
+        const resultOne = document.querySelector("#test_il_one").innerHTML;
+        const resultTwo = document.querySelector("#test_il_five").innerHTML;
+        const resultThree = document.querySelector("#test_il_two").innerHTML;
+        const resultFour = document.querySelector("#test_il_four").innerHTML;
+        const resultFive = document.querySelector("#test_il_three").innerHTML;
+        alert(resultOne);
+        alert(resultTwo);
+        alert(resultThree);
+        alert(resultFour);
+        alert(resultFive);
+    </script>
+</html> 
+
+<!-- Task 4 2nd method works -->
+
+<html>
+	<body>
+		<ol class = "test_ol">
+            <il id = "test_il_one">1</il>
+            <il id = "test_il_two">2</il>
+            <il id = "test_il_three">3</il>
+            <il id = "test_il_four">4</il>
+            <il id = "test_il_five">5</il>
+        </ol> 
+	</body>
+	<script type="text/javascript">
+        const result = document.querySelectorAll("il");
+        const resultOne = result[0].innerHTML;
+        const resultTwo = result[4].innerHTML;
+        const resultThree = result[1].innerHTML;
+        const resultFour = result[3].innerHTML;
+        const resultFive = result[2].innerHTML;
+      	alert(resultOne);
+        alert(resultTwo);
+        alert(resultThree);
+        alert(resultFour);
+        alert(resultFive);
+    </script>
+</html> 
+
+<!-- Task 5 works  -->
+
+<html>
+	<body>
+		<h1>I'am a big header!!!</h1>
+        <div id="myDiv">
+            <p>First paragraph</p>
+            <p>Second paragraph</p>
+            <p>Third paragraph</p>
+            <p>Fourth paragraph</p>
+        </div>
+        <ul id="myList">
+            <li>Make</li>
+            <li>me</li>
+            <li>horizontal!</li>
+        </ul>
+        <span> Make me invisible, please! </span>
+        <script type="text/javascript">
+            document.querySelector("h1").style.backgroundColor = "green";
+            document.querySelectorAll("p")[0].style.fontWeight = "bold";
+            document.querySelectorAll("p")[1].style.color = "red";
+            document.querySelectorAll("p")[2].style.textDecoration = "underline";
+            document.querySelectorAll("p")[3].style.fontStyle = "italic";
+            document.querySelector("ul").innerHTML = 
+            `<div>      Makemehorizontal! </div>`;
+            document.querySelector("span").style.display = "none";
+        </script>
+	</body>
+</html>
+
+<!-- Task6 works -->
+
+<html>
+	 <body>
+		<input type="text" id="input1" value="Text1">
+		<input type="text" id="input2" value="Text2">
+	</body>
+	<script>
+		const cacheValueOne = document.querySelector("#input1").value;
+		const cacheValueTwo = document.querySelector("#input2").value;
+		document.querySelector("#input1").value = cacheValueTwo;
+		document.querySelector("#input2").value = cacheValueOne;
+	</script>
+</html>
+
+<!-- Task 7 works --> 
+<html>
+	<script>
+		document.querySelector("html").innerHTML = 
+		`<body>
+		 	<main class="mainClass check item"> 	
+		    	<div id="myDiv">
+           			<p>First paragraph</p>           
+         		</div>
+       		</main> 
+	    </body>`
+	</script>
+</html>
+
+
+
+
+
+
+
