@@ -162,3 +162,47 @@ console.log(handleFigures(figures));
 // Geometric figure: Square - area: 49
 // Geometric figure: Circle - area: 78.53981633974483
 // 137.53981633974485 // total area
+
+
+// Task 4 with sort
+class Worker {
+	constructor (fullName, dayRate, workingDays) {
+		this.fullName = fullName;
+		this.dayRate = dayRate;
+		this.workingDays = workingDays;
+		this._setExp = 1;
+	}
+	showSalary() {
+		return this.fullName + ': ' + this.dayRate * this.workingDays;
+	}
+	showSalaryWithExperience() {
+		return this.dayRate * this.workingDays * this._setExp;
+	}
+	set setExp(setExp){
+		this._setExp = setExp;
+	}
+	get showExp() {
+		return this.setExp;
+	}
+}
+
+let worker1 = new Worker("John Johnson", 20, 23); 
+worker1.setExp = 1.5; 
+let worker2 = new Worker("Tom Tomson", 48, 22);
+worker2.setExp = 1.5; 
+let worker3 = new Worker("Andy Ander", 29, 23);
+worker3.setExp = 1.5; 
+
+const workers = [worker1, worker2, worker3];
+let sortedWorkers = workers.sort(function (a, b) {
+  return a.showSalaryWithExperience() - b.showSalaryWithExperience();
+});
+
+function sortedListString(arr) {
+	let resultString = `Sorted salary:\n`
+	for (let i = 0; i < arr.length; i++) {
+		resultString += `${arr[i].fullName}: ${arr[i].showSalaryWithExperience()}\n`
+	}
+	alert(resultString);
+}
+sortedListString(workers);
