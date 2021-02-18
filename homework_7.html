@@ -1,0 +1,32 @@
+<html>
+	<body>
+        <div>
+            <select id= "taskNames" name="names" >
+                <option id = "peter" value= "peter">Peter</option>
+                <option id = "john "value= "john">John</option>
+                <option id = "alise" value= "alise">Alice</option>
+                <option id = "alex" value="alex">Alex</option>
+                <option id = "iren" value="iren">Iren</option>
+            </select>
+        </div>
+		<script>
+            let names = document.querySelector("#taskNames");
+            switch(true){
+                case names.value == "peter":
+                    document.querySelector("#peter").innerHTML = "";
+                    break;
+                case names.value == "john":
+                    document.querySelector("#john").innerHTML = "";
+                    break;
+                case names.value == "alise":
+                    document.querySelector("#alise").innerHTML = "";
+                    break;
+                case names.value == "alex":
+                    document.querySelector("#alex").innerHTML = "";
+                    break;
+                case names.value == "iren":
+                    document.querySelector("#iren").innerHTML = "";
+                    break;
+            </script>
+	</body>
+</html>
