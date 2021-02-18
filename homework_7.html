@@ -1,3 +1,88 @@
+//Task 1
+<script>
+function taskOne() {
+	let newWindow = window.open("", "", 
+							"width = 300, height = 300");
+	function resizeWindow() {
+		newWindow.resizeTo(500, 500);
+	}
+	function movingMyWindow() {
+		newWindow.moveTo(200, 200)
+	}
+	function closeThatWindow() {
+		newWindow.close();
+	}
+	setTimeout(resizeWindow, 2000);
+	setTimeout(movingMyWindow, 4000);
+	setTimeout(closeThatWindow, 6000);
+
+}
+taskOne();
+</script>
+
+//Task 2
+
+<html>
+	<body>
+	<p id ='text'>I learning JavaScript events!</p> 
+	<div>
+		<button id = "changeStyleButton">Change style!</button>
+	</div>
+	</body>
+	<script>
+		function changeCSS() {
+			function applyChangesToP() {
+				let destinationForCSS = document.querySelector('#text');
+				destinationForCSS.style.color = "orange";
+				destinationForCSS.style.fontSize = "20px"; 
+				destinationForCSS.style.fontFamily = "Comic Sans MS"
+			}
+			let changeCSSButton = document.querySelector('#changeStyleButton');
+            changeCSSButton.addEventListener("click", applyChangesToP);
+        }
+		changeCSS();
+	</script>
+</html>
+
+// Task 3
+
+<html>
+	<body>
+        <div>
+            <button id = "makePageBlueButton" >Click to make this page blue</button>
+            <button id = "buttonThatOnDoubleClickTurnPagePink" >Double-click to make this page pink</button>
+            <button id = "buttonThatMakesPageBrown" >Press and hold me to make page prown</button>
+            <a id = "makesPageYellow">Point to make page yellow</button>
+        </div>
+        <script type="text/javascript">
+            function blue() {
+			    document.body.style.backgroundColor = "blue";
+            }
+            function pink() {
+                document.body.style.backgroundColor = "pink";
+            }
+            function brown() {
+                document.body.style.backgroundColor = "brown";
+            }
+            function white() {
+                document.body.style.backgroundColor = "white";
+            }
+            
+            let blueButton = document.querySelector("#makePageBlueButton");
+            blueButton.addEventListener("click", blue);
+            let pinkButton = document.querySelector("#buttonThatOnDoubleClickTurnPagePink");
+            pinkButton.addEventListener("dblclick", pink);
+            let brownButton = document.querySelector("buttonThatMakesPageBrown");
+            addEventListener("mousedown", brown);
+            addEventListener("mouseup", white);
+            let yellowA = document.querySelector("makesPageYellow");
+            yellowA.addEventListener(, white)
+		</script>
+	</body>
+</html>
+
+// Task 4
+
 <html>
 	<body>
         <div>
