@@ -1,7 +1,8 @@
 //Task 1
 <script>
 function taskOne() {
-	let newWindow = window.open("", "", "width = 300, height = 300");
+	let newWindow = window.open("", "", 
+							"width = 300, height = 300");
 	function resizeWindow() {
 		newWindow.resizeTo(500, 500);
 	}
@@ -92,25 +93,80 @@ taskOne();
                 <option id = "alex" value="alex">Alex</option>
                 <option id = "iren" value="iren">Iren</option>
             </select>
+            <input type = "button" id = "buttonThatDeletes" value = "delete">
         </div>
 		<script>
-            let names = document.querySelector("#taskNames");
-            switch(true){
-                case names.value == "peter":
-                    document.querySelector("#peter").innerHTML = "";
-                    break;
-                case names.value == "john":
-                    document.querySelector("#john").innerHTML = "";
-                    break;
-                case names.value == "alise":
-                    document.querySelector("#alise").innerHTML = "";
-                    break;
-                case names.value == "alex":
-                    document.querySelector("#alex").innerHTML = "";
-                    break;
-                case names.value == "iren":
-                    document.querySelector("#iren").innerHTML = "";
-                    break;
-            </script>
+			buttonThatDeletes.addEventListener("click", deleteName);
+
+			function deleteName() {
+				let name = document.getElementById("taskNames");
+				name.remove(name.selectedIndex);
+			}
+        </script>
+	</body>
+</html>
+
+// Task 5
+
+<html>
+	<body>
+        <div>
+            <button id = "liveButton">Live button!</button>
+            <p id = "messageOnCLick"></p>
+        </div>
+		<script>
+			let liveButton = document.querySelector("#liveButton");
+			liveButton.addEventListener("mouseover", liveButtonMouseOver);
+			liveButton.addEventListener("click", liveButtonClick);
+			liveButton.addEventListener("mouseout", liveButtonMouseOut);
+
+			function liveButtonMouseOver() {
+				document.querySelector("#messageOnCLick").innerHTML += "Mouse on Me!<br>";
+			}
+			function liveButtonClick() {
+				document.querySelector("#messageOnCLick").innerHTML += "I was pressed<br>";
+			}
+			function liveButtonMouseOut() {
+				document.querySelector("#messageOnCLick").innerHTML += "Mouse is not on me<br>";
+			}
+		</script>
+	</body>
+</html>
+
+// Task 6
+
+<html>
+	<body>
+        <div id = "result"> </div>
+		<script>
+			function showWidthHeight() {
+				let width = window.innerWidth;
+				let height = window.innerHeight;
+				let size = `Width: ${width}, Height: ${height}`
+				document.querySelector("#result").innerHTML = size;
+			}
+
+			window.addEventListener("resize", showWidthHeight);
+		</script>
+	</body>
+</html>
+
+// Task 7 
+
+<html>
+	<body>
+        <div>
+        	<select name = "country" id = "country">
+        		<option value = "ger">Germany</option>
+        		<option value = "usa">USA</option>
+        		<option value = "ukraine">Ukraine</option>
+        	</select>
+        	<select name = "cities" id = "cities"></select>
+        	<p></p>
+        	</select>
+        </div>
+        <script>
+			 
+		</script>
 	</body>
 </html>
