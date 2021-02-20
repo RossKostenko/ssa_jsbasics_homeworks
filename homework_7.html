@@ -1,23 +1,22 @@
 //Task 1
 <script>
-function taskOne() {
-	let newWindow = window.open("", "", 
-							"width = 300, height = 300");
-	function resizeWindow() {
-		newWindow.resizeTo(500, 500);
-	}
-	function movingMyWindow() {
-		newWindow.moveTo(200, 200)
-	}
-	function closeThatWindow() {
-		newWindow.close();
-	}
-	setTimeout(resizeWindow, 2000);
-	setTimeout(movingMyWindow, 4000);
-	setTimeout(closeThatWindow, 6000);
+	function taskOne() {
+		let newWindow = window.open("", "", "width = 300, height = 300");
+		function resizeWindow() {
+			newWindow.resizeTo(500, 500);
+		}
+		function movingMyWindow() {
+			newWindow.moveTo(200, 200)
+		}
+		function closeThatWindow() {
+			newWindow.close();
+		}
+		setTimeout(resizeWindow, 2000);
+		setTimeout(movingMyWindow, 4000);
+		setTimeout(closeThatWindow, 6000);
 
-}
-taskOne();
+	}
+	taskOne();
 </script>
 
 //Task 2
@@ -37,9 +36,9 @@ taskOne();
 				destinationForCSS.style.fontSize = "20px"; 
 				destinationForCSS.style.fontFamily = "Comic Sans MS"
 			}
-			let changeCSSButton = document.querySelector('#changeStyleButton');
-            changeCSSButton.addEventListener("click", applyChangesToP);
-        }
+		let changeCSSButton = document.querySelector('#changeStyleButton');
+        	changeCSSButton.addEventListener("click", applyChangesToP);
+        	}
 		changeCSS();
 	</script>
 </html>
@@ -95,13 +94,13 @@ taskOne();
             </select>
             <input type = "button" id = "buttonThatDeletes" value = "delete">
         </div>
-		<script>
-			buttonThatDeletes.addEventListener("click", deleteName);
+	<script>
+		buttonThatDeletes.addEventListener("click", deleteName);
 
-			function deleteName() {
-				let name = document.getElementById("taskNames");
-				name.remove(name.selectedIndex);
-			}
+		function deleteName() {
+			let name = document.getElementById("taskNames");
+			name.remove(name.selectedIndex);
+		}
         </script>
 	</body>
 </html>
@@ -167,6 +166,6 @@ taskOne();
         </div>
         <script>
 			 
-		</script>
+	</script>
 	</body>
 </html>
