@@ -66,6 +66,11 @@ function switchPlaces(str) {
 }
 switchPlaces("Java Script");
 
+function switchPlaces(str) {
+	 return str.replace(/(\w+)\s(\w+)/, '$2, $1');
+}
+switchPlaces("Java Script");
+
 // Task 5 works
 
 function validateCreditCard(card) {
