@@ -26,6 +26,8 @@ function findD(str) {
 }
 findD("cdbBdbsbz");
 
+;
+
 // Task 3 readable
 
 function findD(str) {
