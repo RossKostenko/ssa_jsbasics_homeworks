@@ -89,8 +89,8 @@ secondMailPattern("my_mail@gmail.com");
 
 // Task 7 having issues
 function checkLogin(str) {
-  let regExp = /[a-z0-9\.](! \*){2,10}/gi;
-  let number = /[0-9]+\.?[0-9]*/g;
+  let regExp = /^[a-zA-Z]{1}[a-z0-9\.]{1,9}$/;
+  let number = /[0-9\.]+/g;
   return [regExp.test(str), str.match(number)];
 }
 
