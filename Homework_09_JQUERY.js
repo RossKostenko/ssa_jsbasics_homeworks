@@ -17,3 +17,12 @@ $("h3").foreach(function(i, le) {
 	$("h3").next().remove();
 	$("h3").prepend($elem);
 })
+
+// Task 4
+
+const $checkbox = $(':checkbox');
+$checkboxes.on('click', function(){
+	if ($(':checkbox:checked).length) === 3 {
+		$checkboxes.attr('disabled', true);    
+	}
+});
