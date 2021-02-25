@@ -82,7 +82,7 @@ validateCreditCard("9999-9999-9999-9999");
 
 // Task 6 works
 function secondMailPattern(str) {
-  let regExp = /^[0-9A-Za-z]+[-{1}]?[0-9A-Za-z_]+@[\w-]+\.\w{2,4}/;
+  let regExp = /^[0-9A-Za-z]+[-{1}]?\w+@[\w-]+\.\w{2,4}/;
   return regExp.test(str) ? "Email is correct" : "Email is not correct";
 }
 secondMailPattern("my_mail@gmail.com");
