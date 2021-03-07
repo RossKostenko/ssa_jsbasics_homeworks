@@ -37,3 +37,20 @@ function mul(...rest) {
 }
 console.log(mul(1, "str", 2, 3, true)); // 6
 console.log(mul(null, "str", false, true)); // 0
+
+
+// Task 5
+const keys = [1,2,3,4];
+const values = ['div', 'span', 'b', 'i']
+
+function mapBuilder(keys, values) {
+   const map = new Map();
+   for (let i of keys) {
+      map.set(i, values[i-1]);
+   }
+   return map;
+}
+
+const map = mapBuilder(keys, values);
+console.log(map.size);
+console.log(map.get(2));
